@@ -1,16 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Horoscope = () => {
-	return (
+const Horoscope = ({ title, data }) => {
+
+    const { currentDate, months } = data;
+    const renderZodiacs =() => {
+        if (!months.length) {
+            return null;
+        }
+        return months.map(singleMonth => {
+            return <h3 key={singleMonth.constellation}>
+                {singleMonth.constellation}
+			</h3>
+        })
+    };
+
+    const renderActive =() => {
+        if (!months.length) {
+            return null;
+        }
+        const activeMonth = months.find(singleMonth => singleMonth.headline); //headline od razu wie ze ma wybierac true, mozna tez dodac === true
+        return (
+			<div>
+				<h2>{activeMonth.constellation}</h2>
+
+			</div>
+        )
+    };
+
+    return (
 		<div className="horoscopeContainer">
-			<h2>Horoscope</h2>
+			<h4>{currentDate}</h4>
+			<h2>{title}</h2>
+            {renderActive()}
+            {renderZodiacs()}
 		</div>
-	);
+    );
 };
 
-Horoscope.defaultProps = {};
+Horoscope.defaultProps = {
+    title: ''
+};
 
-Horoscope.propTypes = {};
+Horoscope.propTypes = {
+    title: PropTypes.string
+};
 
 export default Horoscope;
