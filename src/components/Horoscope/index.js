@@ -11,7 +11,7 @@ const Horoscope = ({ title, data }) => {
         return months.map(singleMonth => {
             return <h3 key={singleMonth.constellation}>
                 {singleMonth.constellation}
-			</h3>
+            </h3>
         })
     };
 
@@ -21,20 +21,22 @@ const Horoscope = ({ title, data }) => {
         }
         const activeMonth = months.find(singleMonth => singleMonth.headline); //headline od razu wie ze ma wybierac true, mozna tez dodac === true
         return (
-			<div>
-				<h2>{activeMonth.constellation}</h2>
 
-			</div>
+            <h2>{activeMonth.constellation}</h2>
         )
     };
 
     return (
-		<div className="horoscopeContainer">
-			<h4>{currentDate}</h4>
-			<h2>{title}</h2>
-            {renderActive()}
+        <div className="horoscopeContainer">
+            <h4>{currentDate}</h4>
+            <h2>{title}</h2>
+            <div className="todayHoroscope">
+                {renderActive()}
+
+            </div>
             {renderZodiacs()}
-		</div>
+
+        </div>
     );
 };
 
