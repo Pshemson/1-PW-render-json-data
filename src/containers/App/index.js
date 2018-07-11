@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	class App extends React.Component {
 		render() {
 			return (
-				<div>
-					<h1>My components:</h1>
-					<Horoscope title = "tytuł z App" data = {DataHoroscope}/>
+				<div className="container">
+					<div className="titleContainer">
+					<h1>HOROSCOPE</h1>
+					</div>
+					<Horoscope title = "That's Your Horoscope For Today YEAH YEAH YEAH YEAH!" data = {DataHoroscope}/>
+
 				</div>
 		);
 		}

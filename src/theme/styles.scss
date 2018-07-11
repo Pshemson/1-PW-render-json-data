@@ -1,7 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: pink;
+  background: #E9EBEE;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titleContainer {
+text-align: center;
+  &:after {
+    content: "";
+    border: 1px solid #4267B2;
+    display: block;
+    width: 258px;
+    height: 6px;
+    background: #4267B2;
+    margin: 0 auto;
+  }
+  h1 {
+    margin-bottom: 0;
+    text-shadow: 3px 1px 9px #000;
+    color: #FFFFFF;
+  }
 }
 
 .horoscopeContainer {
-  background: red;
+  background: #FFFFFF;
+  h4 {
+text-align: center;
+    font-size: 18px;
+    color: #365899;
+  }
 }
