@@ -23,11 +23,14 @@ const Horoscope = ({ title, data }) => {
         return (
             <div>
 
-                    <h5>{activeMonth.constellation}</h5>
+                <h5>{activeMonth.constellation}</h5>
                 <div className="descriptionContainer">
                     <p>{activeMonth.description}</p>
+                    <div className="horoscopeImage">
+                        <img src={activeMonth.image}></img>
+                    </div>
                 </div>
-                    <img src={activeMonth.image}></img>
+
 
             </div>
 
