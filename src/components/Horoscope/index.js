@@ -15,27 +15,45 @@ const Horoscope = ({ title, data }) => {
         })
     };
 
-    const renderActive =() => {
+    const renderactiveMonth =() => {
         if (!months.length) {
             return null;
         }
         const activeMonth = months.find(singleMonth => singleMonth.headline); //headline od razu wie ze ma wybierac true, mozna tez dodac === true
         return (
+            <div>
 
-            <h2>{activeMonth.constellation}</h2>
+                    <h5>{activeMonth.constellation}</h5>
+                <div className="descriptionContainer">
+                    <p>{activeMonth.description}</p>
+                </div>
+                    <img src={activeMonth.image}></img>
+
+            </div>
+
         )
     };
+/*
+    const renderactiveImage =() => {
+        if (!months.length) {
+            return null;
+        }
+        const activeImage = months.find(singleMonth => singleMonth.image);
+        return (
 
+            <h2>{activeImage.constellation}</h2>
+        )
+    };
+*/
     return (
         <div className="horoscopeContainer">
             <h4>{currentDate}</h4>
             <h2>{title}</h2>
-            <div className="todayHoroscope">
-                {renderActive()}
 
+            <div className="todayHoroscope">
+                {renderactiveMonth()}
             </div>
             {renderZodiacs()}
-
         </div>
     );
 };

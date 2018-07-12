@@ -42,8 +42,21 @@ text-align: center;
 }
 
 .todayHoroscope {
+  display: flex; //zrobic to lepiej
   height: 360px;
-  width: 431px;
-  display: block;
-  background: red;
+  width: 55%;
+  background: #F6F7F9;
+  margin: 0 auto;
+  h5 {
+    font-size: 40px;
+    margin: 0;
+    color: #4267B2;
+  }
+  img {
+    height: 220px;
+  }
+  .descriptionContainer {
+
+
+  }
 }

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					<div className="titleContainer">
 					<h1>HOROSCOPE</h1>
 					</div>
-					<Horoscope title = "That's Your Horoscope For Today YEAH YEAH YEAH YEAH!" data = {DataHoroscope}/>
+					<Horoscope title = "That's Your Horoscope For Today!" data = {DataHoroscope}/>
 
 				</div>
 		);
