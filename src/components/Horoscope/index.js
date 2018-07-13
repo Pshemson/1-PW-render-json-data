@@ -9,9 +9,23 @@ const Horoscope = ({ title, data }) => {
             return null;
         }
         return months.map(singleMonth => {
-            return <h3 key={singleMonth.constellation}>
-                {singleMonth.constellation}
-            </h3>
+            return <div>
+                <li>
+                    <h3 key={singleMonth.constellation}>
+                        {singleMonth.constellation}
+                    </h3>
+                    <p>{singleMonth.dateRange}</p>
+                    <div>
+                        <div>
+                            <p>{singleMonth.description}</p>
+                        </div>
+                        <div className="horoscopeimageList">
+                        <img src={singleMonth.image}></img>
+                        </div>
+                    </div>
+                </li>
+            </div>
+
         })
     };
 
@@ -24,8 +38,11 @@ const Horoscope = ({ title, data }) => {
             <div>
 
                 <h5>{activeMonth.constellation}</h5>
+                <p>{activeMonth.dateRange}</p>
                 <div className="descriptionContainer">
-                    <p>{activeMonth.description}</p>
+                    <div className="paragraphContainer">
+                        <p>{activeMonth.description}</p>
+                    </div>
                     <div className="horoscopeImage">
                         <img src={activeMonth.image}></img>
                     </div>
@@ -56,7 +73,9 @@ const Horoscope = ({ title, data }) => {
             <div className="todayHoroscope">
                 {renderactiveMonth()}
             </div>
+            <ul className="horoscopeList">
             {renderZodiacs()}
+            </ul>
         </div>
     );
 };

@@ -42,8 +42,7 @@ text-align: center;
 }
 
 .todayHoroscope {
-  height: 360px;
-  width: 55%;
+  width: 89%;
   background: #F6F7F9;
   margin: 0 auto;
   h5 {
@@ -53,21 +52,44 @@ text-align: center;
     color: #4267B2;
     text-transform: uppercase;
   }
+  p {
+    margin-top: -9px;
+  }
   .descriptionContainer {
     display: flex;
     .horoscopeImage {
-      width: calc(50% - 24px);
+      width: calc(50% - 40px);
+      min-width: 144px;
       img {
         height: auto;
         max-width: 100%
       }
     }
-    p {
+    .paragraphContainer {
       font-size: 17px;
       font-family: omnes-pro, Lato, Open Sans, sans-serif;
       line-height: 1.57;
-      margin: 0;
-      width: calc(50% + 24px);
+      width: calc(50% + 40px);
+      P {
+        margin-top: 0;
+      }
     }
+  }
+}
+.horoscopeList {
+  width: 89%;
+  margin: 0 auto;
+  padding: 0;
+  li {
+    list-style: none;
+    width: calc(33% - 5px);
+    margin: 5px 0 0 5px;
+  }
+}
+.horoscopeimageList {
+min-width: 235px;
+  img {
+    height: auto;
+    max-width: 100%;
   }
 }
