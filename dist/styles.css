@@ -1,6 +1,78 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background: pink; }
+  background: #E9EBEE;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.titleContainer {
+  text-align: center; }
+  .titleContainer:after {
+    content: "";
+    border: 1px solid #4267B2;
+    display: block;
+    width: 258px;
+    height: 6px;
+    background: #4267B2;
+    margin: 0 auto; }
+  .titleContainer h1 {
+    margin-bottom: 0;
+    text-shadow: 3px 1px 9px #000;
+    color: #FFFFFF; }
 
 .horoscopeContainer {
-  background: red; }
+  background: #FFFFFF; }
+  .horoscopeContainer h4 {
+    text-align: center;
+    font-size: 18px;
+    color: #365899; }
+
+.todayHoroscope {
+  width: 89%;
+  background: #F6F7F9;
+  margin: 0 auto; }
+  .todayHoroscope h5 {
+    font-size: 40px;
+    margin-bottom: 12px;
+    margin-top: 0;
+    color: #4267B2;
+    text-transform: uppercase; }
+  .todayHoroscope p {
+    margin-top: -9px; }
+  .todayHoroscope .descriptionContainer {
+    display: flex; }
+    .todayHoroscope .descriptionContainer .horoscopeImage {
+      width: calc(50% - 40px);
+      min-width: 144px; }
+      .todayHoroscope .descriptionContainer .horoscopeImage img {
+        height: auto;
+        max-width: 100%; }
+    .todayHoroscope .descriptionContainer .paragraphContainer {
+      font-size: 17px;
+      font-family: omnes-pro, Lato, Open Sans, sans-serif;
+      line-height: 1.57;
+      width: calc(50% + 40px); }
+      .todayHoroscope .descriptionContainer .paragraphContainer P {
+        margin-top: 0; }
+
+.horoscopeList {
+  width: 89%;
+  margin: 0 auto;
+  padding: 0; }
+  .horoscopeList li {
+    list-style: none;
+    width: calc(33% - 5px);
+    margin: 5px 0 0 5px; }
+
+.horoscopeimageList {
+  min-width: 235px; }
+  .horoscopeimageList img {
+    height: auto;
+    max-width: 100%; }
 
