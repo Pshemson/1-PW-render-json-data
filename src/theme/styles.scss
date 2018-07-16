@@ -12,6 +12,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  height: auto;
 }
 
 .titleContainer {
@@ -72,6 +73,7 @@ text-align: center;
       width: calc(50% + 40px);
       P {
         margin-top: 0;
+        padding-left: 10px;
       }
     }
   }

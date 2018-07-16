@@ -16,13 +16,12 @@ const Horoscope = ({ title, data }) => {
                     </h3>
                     <p>{singleMonth.dateRange}</p>
                     <div>
-                        <div>
-                            <p>{singleMonth.description}</p>
-                        </div>
-                        <div className="horoscopeimageList">
-                        <img src={singleMonth.image}></img>
-                        </div>
+                        <p>{singleMonth.description}</p>
                     </div>
+                    <div className="horoscopeimageList">
+                        <img src={singleMonth.image}></img>
+                    </div>
+
                 </li>
             </div>
 
@@ -40,11 +39,12 @@ const Horoscope = ({ title, data }) => {
                 <h5>{activeMonth.constellation}</h5>
                 <p>{activeMonth.dateRange}</p>
                 <div className="descriptionContainer">
-                    <div className="paragraphContainer">
-                        <p>{activeMonth.description}</p>
-                    </div>
+
                     <div className="horoscopeImage">
                         <img src={activeMonth.image}></img>
+                    </div>
+                    <div className="paragraphContainer">
+                        <p>{activeMonth.description}</p>
                     </div>
                 </div>
 
