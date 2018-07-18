@@ -43,11 +43,16 @@ body {
     margin-bottom: 12px;
     margin-top: 0;
     color: #4267B2;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-left: 5px; }
+  .todayHoroscope .horoscopeContainer {
+    border: 8px solid #4267B2; }
   .todayHoroscope p {
-    margin-top: -9px; }
+    margin-top: -9px;
+    margin-left: 5px; }
   .todayHoroscope .descriptionContainer {
-    display: flex; }
+    display: flex;
+    margin-left: 5px; }
     .todayHoroscope .descriptionContainer .horoscopeImage {
       width: calc(50% - 40px);
       min-width: 144px; }
@@ -72,15 +77,20 @@ body {
   justify-content: space-between; }
   .horoscopeList li {
     list-style: none;
-    margin: 5px 0 0 5px; }
+    background: #F6F7F9;
+    margin: 10px 0 0 0; }
     @media (min-width: 768px) {
       .horoscopeList li {
         list-style: none;
         width: calc(33% - 5px);
-        margin: 5px 0 0 5px; } }
+        margin: 10px 0 0 0;
+        background: #F6F7F9; } }
+    .horoscopeList li h3 {
+      color: #4267B2; }
 
 .horoscopeimageList {
-  min-width: 215px; }
+  min-width: 215px;
+  text-align: center; }
   .horoscopeimageList img {
     height: auto;
     max-width: 100%; }

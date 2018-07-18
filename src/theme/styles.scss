@@ -71,12 +71,19 @@ text-align: center;
     margin-top: 0;
     color: #4267B2;
     text-transform: uppercase;
+    margin-left: 5px;
+  }
+  .horoscopeContainer {
+    border: 8px solid #4267B2;
   }
   p {
     margin-top: -9px;
+    margin-left: 5px;
+
   }
   .descriptionContainer {
     display: flex;
+    margin-left: 5px;
     .horoscopeImage {
       width: calc(50% - 40px);
       min-width: 144px;
@@ -106,17 +113,23 @@ text-align: center;
   justify-content: space-between;
   li {
     list-style: none;
-    margin: 5px 0 0 5px;
+    background: #F6F7F9;
+    margin: 10px 0 0 0;
     @include small {
       list-style: none;
       width: calc(33% - 5px);
-      margin: 5px 0 0 5px;
+      margin: 10px 0 0 0;
+      background: #F6F7F9;
+    }
+    h3 {
+      color: #4267B2;
     }
   }
 
 }
 .horoscopeimageList {
-min-width: 215px;
+  min-width: 215px;
+  text-align: center;
   img {
     height: auto;
     max-width: 100%;

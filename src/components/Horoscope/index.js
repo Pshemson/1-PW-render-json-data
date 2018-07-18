@@ -32,14 +32,14 @@ const Horoscope = ({ title, data }) => {
         }
         const activeMonth = months.find(singleMonth => singleMonth.headline); //headline od razu wie ze ma wybierac true, mozna tez dodac === true
         return (
-            <div>
+            <div className="horoscopeContainer">
 
                 <h5>{activeMonth.constellation}</h5>
                 <p>{activeMonth.dateRange}</p>
                 <div className="descriptionContainer">
 
                     <div className="horoscopeImage">
-                        <img src={activeMonth.image}></img>
+                        <img src={activeMonth.image} alt="Sign"></img>
                     </div>
                     <div className="paragraphContainer">
                         <p>{activeMonth.description}</p>
