@@ -9,21 +9,19 @@ const Horoscope = ({ title, data }) => {
             return null;
         }
         return months.map(singleMonth => {
-            return <div>
-                <li>
-                    <h3 key={singleMonth.constellation}>
-                        {singleMonth.constellation}
-                    </h3>
-                    <p>{singleMonth.dateRange}</p>
-                    <div>
-                        <p>{singleMonth.description}</p>
-                    </div>
-                    <div className="horoscopeimageList">
-                        <img src={singleMonth.image}></img>
-                    </div>
+            return  <li>
+                <h3 key={singleMonth.constellation}>
+                    {singleMonth.constellation}
+                </h3>
+                <p>{singleMonth.dateRange}</p>
+                <div>
+                    <p>{singleMonth.description}</p>
+                </div>
+                <div className="horoscopeimageList">
+                    <img src={singleMonth.image}></img>
+                </div>
 
-                </li>
-            </div>
+            </li>
 
         })
     };

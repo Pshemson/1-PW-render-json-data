@@ -1,3 +1,22 @@
+//Mixins
+//RWD: Minimum widths to apply styles (mobile first)
+@mixin xSmall {
+  @media (min-width: 460px) {
+    @content
+  }
+}
+@mixin small {
+  @media (min-width: 768px) {
+    @content
+  }
+}
+@mixin medium {
+  @media (min-width: 960px) {
+    @content
+  }
+}
+
+//Styles
 * {
   box-sizing: border-box;
 }
@@ -82,14 +101,22 @@ text-align: center;
   width: 89%;
   margin: 0 auto;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   li {
     list-style: none;
-    width: calc(33% - 5px);
     margin: 5px 0 0 5px;
+    @include small {
+      list-style: none;
+      width: calc(33% - 5px);
+      margin: 5px 0 0 5px;
+    }
   }
+
 }
 .horoscopeimageList {
-min-width: 235px;
+min-width: 215px;
   img {
     height: auto;
     max-width: 100%;
