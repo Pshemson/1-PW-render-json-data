@@ -9,7 +9,8 @@ body {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: auto; }
 
 .titleContainer {
   text-align: center; }
@@ -59,19 +60,27 @@ body {
       line-height: 1.57;
       width: calc(50% + 40px); }
       .todayHoroscope .descriptionContainer .paragraphContainer P {
-        margin-top: 0; }
+        margin-top: 0;
+        padding-left: 10px; }
 
 .horoscopeList {
   width: 89%;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
   .horoscopeList li {
     list-style: none;
-    width: calc(33% - 5px);
     margin: 5px 0 0 5px; }
+    @media (min-width: 768px) {
+      .horoscopeList li {
+        list-style: none;
+        width: calc(33% - 5px);
+        margin: 5px 0 0 5px; } }
 
 .horoscopeimageList {
-  min-width: 235px; }
+  min-width: 215px; }
   .horoscopeimageList img {
     height: auto;
     max-width: 100%; }
